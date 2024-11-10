@@ -3,7 +3,7 @@ import ProjectList from '../ProjectList/ProjectList'
 
 const Home = () => {
   return (
-    <div>
+    <div >
         <ProjectList/>
     </div>
   )
