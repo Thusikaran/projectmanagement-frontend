@@ -1,4 +1,6 @@
-import { Form, FormControl, FormField } from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
+import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -16,21 +18,17 @@ const InviteUserForm = () => {
          <Form {...form}>
             <form className='space-y-5' onSubmit={form.handleSubmit(onSubmit)}>
 
-                <FormField control={form.control} name="name" render={({field})=><FormItem>
+                <FormField control={form.control} name="email" render={({field})=><FormItem>
                     <FormControl>
                         <Input {...field}
                          type="text"
                          className="border w-full border-gray-700 py-5 px-5"
-                         placeholder="project name ..." />
+                         placeholder="user email ..." />
                     </FormControl>
                 </FormItem>} 
                 />
-                
-              
-                
-            
 
-                <Button type="submit" className="w-full mt-5"> Create Project</Button> 
+                <Button type="submit" className="w-full mt-5"> Invite User</Button> 
            
             </form>
         </Form>
